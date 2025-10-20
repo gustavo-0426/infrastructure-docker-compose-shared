@@ -2,7 +2,7 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4
-    container_name: pgadmin
+    container_name: shared_pgadmin
     restart: always
     ports:
       - "8080:80"
@@ -10,14 +10,14 @@ services:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
     volumes:
-      - pgadmin_data:/var/lib/pgadmin
+      - shared_pgadmin_data:/var/lib/pgadmin
     networks:
-      - pgadmin_network
+      - shared_pgadmin_network
 
 volumes:
-  pgadmin_data:
-    name: pgadmin_data
+  shared_pgadmin_data:
+    name: shared_pgadmin_data
 networks:
-  pgadmin_network:
-    name: pgadmin_network
+  shared_pgadmin_network:
+    name: shared_pgadmin_network
     driver: bridge
