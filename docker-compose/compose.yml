@@ -7,8 +7,8 @@ services:
     ports:
       - "${PGADMIN_PORT}:${PGADMIN_CONTAINER_PORT}"
     environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
     volumes:
       - shared_pgadmin_data:/var/lib/pgadmin
     networks:
