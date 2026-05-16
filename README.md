@@ -25,10 +25,10 @@
 #### Crear o modificar archivo docker-compose\\.env con sus respectivos valores:
 ```bash
 # Configuración de pgAdmin
-PGADMIN_EMAIL=admin@admin.com
-PGADMIN_PASSWORD=admin123
-PGADMIN_CONTAINER_PORT=80
-PGADMIN_PORT=5050
+PGADMIN_EMAIL=
+PGADMIN_PASSWORD=
+PGADMIN_CONTAINER_PORT=
+PGADMIN_PORT=
 ```
 
 ### 2️⃣ Ejecutar Aplicación con Docker Compose
